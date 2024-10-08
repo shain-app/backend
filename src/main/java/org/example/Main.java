@@ -8,7 +8,5 @@ public class Main {
         Person person = new Person("Gosho", 36);
         System.out.println(person.name);
         System.out.println(person.age);
-        System.out.println(person.age);
-        System.out.println(person.age);
     }
 }
