@@ -9,5 +9,6 @@ public class Main {
         System.out.println(person.name);
         System.out.println(person.age);
         System.out.println(person.age);
+        System.out.println(person.age);
     }
 }
