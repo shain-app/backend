@@ -1,9 +1,6 @@
 package org.example;
 
 import org.example.app.repository.ShainDatabase;
-import org.example.app.service.ShainService;
-
-import java.util.List;
 
 public class Main {
 
@@ -11,6 +8,5 @@ public class Main {
 
         ShainDatabase shainDatabase = new ShainDatabase();
         System.out.println(shainDatabase.getInMemoryDatabase().size());
-
     }
 }
