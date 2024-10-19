@@ -11,5 +11,6 @@ public class Main {
 
         ShainDatabase shainDatabase = new ShainDatabase();
         System.out.println(shainDatabase.getInMemoryDatabase().size());
+
     }
 }
