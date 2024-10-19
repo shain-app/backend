@@ -26,6 +26,5 @@ public class ShainService {
         }
 
         System.out.println(cart.calculateTotalPrice());
-
     }
 }
