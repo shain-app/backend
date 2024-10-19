@@ -1,12 +1,12 @@
 package org.example;
 
-import org.example.app.service.ShainService;
+import org.example.app.repository.ShainDatabase;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ShainService shainService = new ShainService();
-        shainService.runApp();
+        ShainDatabase shainDatabase = new ShainDatabase();
+        System.out.println(shainDatabase.getInMemoryDatabase().size());
     }
 }
