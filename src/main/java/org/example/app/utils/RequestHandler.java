@@ -46,8 +46,8 @@ public class RequestHandler {
                     }
                 } else if (requestLine.startsWith("POST /add-item")) {
                     Item newItem = extractItemFromRequest(reader);
-                    //boolean success = shainApi.addItem(newItem);
-                    //sendJsonResponse(out, success ? "Item added" : "Failed to add item");
+                    // boolean success = shainApi.addItem(newItem);
+                    // sendJsonResponse(out, success ? "Item added" : "Failed to add item");
                 } else {
                     output.println("HTTP/1.1 404 Not Found\r\n");
                 }
@@ -72,11 +72,17 @@ public class RequestHandler {
 
     private void sendJsonResponse(PrintWriter out, Object response) throws IOException {
         String jsonResponse = objectMapper.writeValueAsString(response);
-        out.println("HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n" + jsonResponse);
+        out.println("HTTP/1.1 200 OK\r\n" +
+                "Content-Type: application/json\r\n" +
+                "Access-Control-Allow-Origin: *\r\n" + // Allow all origins
+                "\r\n" + jsonResponse);
     }
 
     private void sendErrorResponse(PrintWriter out, String message) throws IOException {
         String jsonResponse = objectMapper.writeValueAsString(message);
-        out.println("HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n" + jsonResponse);
+        out.println("HTTP/1.1 200 OK\r\n" +
+                "Content-Type: application/json\r\n" +
+                "Access-Control-Allow-Origin: *\r\n" + // Allow all origins
+                "\r\n" + jsonResponse);
     }
 }
