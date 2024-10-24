@@ -41,8 +41,10 @@ public class RequestHandler {
                     try {
                         Item item = shainApi.getItem(id);
                         sendJsonResponse(output, item);
+                        System.out.println("Item: " + item + " sent successfully");
                     } catch(IndexOutOfBoundsException e) {
                         sendJsonResponse(output, "Item not found");
+                        System.out.println("Item with id " + id + " not found in database!");
                     }
                 } else if (requestLine.startsWith("POST /add-item")) {
                     Item newItem = extractItemFromRequest(reader);
