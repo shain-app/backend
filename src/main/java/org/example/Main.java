@@ -1,14 +1,14 @@
 package org.example;
 
-import org.example.app.service.ShainService;
+import org.example.app.service.ItemService;
 import org.example.app.utils.RequestHandler;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ShainService shainService = new ShainService();
-        RequestHandler requestHandler = new RequestHandler(shainService);
+        ItemService itemService = new ItemService();
+        RequestHandler requestHandler = new RequestHandler(itemService);
 
         requestHandler.runApp();
     }
