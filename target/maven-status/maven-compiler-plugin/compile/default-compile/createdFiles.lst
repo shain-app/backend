@@ -1,2 +1,8 @@
 org/example/Main.class
-org/example/app/Person.class
+org/example/app/model/Item.class
+org/example/app/service/ShainService.class
+org/example/app/repository/ShainDatabase.class
+org/example/app/utils/RequestHandler.class
+org/example/app/api/ShainApi.class
+org/example/app/model/Customer.class
+org/example/app/model/Cart.class
