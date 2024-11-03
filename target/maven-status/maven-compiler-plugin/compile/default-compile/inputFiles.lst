@@ -1,2 +1,8 @@
-/Users/helinadem/Desktop/SheinApp/src/main/java/org/example/Main.java
-/Users/helinadem/Desktop/SheinApp/src/main/java/org/example/app/Person.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/Main.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/api/ShainApi.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Cart.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Customer.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Item.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/repository/ShainDatabase.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/service/ShainService.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/utils/RequestHandler.java
