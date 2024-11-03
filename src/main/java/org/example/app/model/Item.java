@@ -8,6 +8,12 @@ public class Item {
     private String category;
 
     public Item(String name, String size, double price, String category) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative.");
+        }
+        if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
         this.name = name;
         this.size = size;
         this.price = price;
@@ -31,6 +37,9 @@ public class Item {
     }
 
     public void setName(String name) {
+        if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
         this.name = name;
     }
 
@@ -39,6 +48,9 @@ public class Item {
     }
 
     public void setPrice(double price) {
+        if (price < 0) { // Validation in setter
+            throw new IllegalArgumentException("Price cannot be negative.");
+        }
         this.price = price;
     }
 
