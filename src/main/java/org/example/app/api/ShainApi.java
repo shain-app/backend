@@ -24,6 +24,6 @@ public class ShainApi {
 
     // GET - http://localhost:8080/all
     public List<Item> getAll() {
-        return shainService.getAll();
+        return itemService.getAll();
     }
 }
