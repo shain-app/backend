@@ -21,5 +21,17 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Build and test with Maven
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+          mvn clean test
+          elif [ "${{ github.event_name }}" == "push" ] && [ "${{ github.ref }}" == "refs/heads/main" ]; then
+          mvn clean package
+          fi
+
+      - name: Upload build artifacts
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: target/
