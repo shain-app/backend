@@ -29,11 +29,9 @@ public class Customer {
     }
 
     public void setAge(int newAge) {
-        if(newAge > 0) {
-            this.age = newAge;
-        } else {
+        if (newAge < 0 ) {
             throw new IllegalArgumentException("Age can't be 0 or below 0.");
         }
+        this.age = newAge;
     }
 }
-

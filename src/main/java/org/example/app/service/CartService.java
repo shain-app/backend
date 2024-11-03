@@ -24,14 +24,9 @@ public class CartService {
         }
     }
 
-    // Method to calculate the total price with error handling
-    public double calculateTotal() {
-        try {
-            return cart.calculateTotalPrice();
-        } catch (Exception e) {
-            System.out.println("There is an error coming from the database.");
-            return 0.0;
-        }
+    // Method to calculate the total price
+    public double calculateTotalPrice() {
+        return cart.calculateTotalPrice();
     }
 
     // Method to remove an item by name

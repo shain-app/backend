@@ -1,7 +1,7 @@
 package org.example.app.api;
 
 import org.example.app.model.Item;
-import org.example.app.service.ShainService;
+import org.example.app.service.ItemService;
 
 import java.util.List;
 
@@ -11,15 +11,15 @@ import java.util.List;
  */
 public class ShainApi {
 
-    private final ShainService shainService;
+    private final ItemService itemService;
 
-    public ShainApi(ShainService shainService) {
-        this.shainService = shainService;
+    public ShainApi(ItemService itemService) {
+        this.itemService = itemService;
     }
 
     // GET - http://localhost:8080/items/{id}
     public Item getItem(Integer id) {
-        return shainService.getItem(id);
+        return itemService.getItem(id);
     }
 
     // GET - http://localhost:8080/all
