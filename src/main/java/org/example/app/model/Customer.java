@@ -6,6 +6,9 @@ public class Customer {
     private int age;
 
     public Customer(String name, int age){
+        if (age <= 0) {
+            throw new IllegalArgumentException("Age must be greater than 0.");
+        }
         this.name = name;
         this.age = age;
     }
@@ -15,6 +18,9 @@ public class Customer {
     }
 
     public void setName(String newName) {
+        if (newName == null || newName.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
         this.name = newName;
     }
 
@@ -29,3 +35,4 @@ public class Customer {
         this.age = newAge;
     }
 }
+
