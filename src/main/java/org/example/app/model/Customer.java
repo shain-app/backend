@@ -24,15 +24,6 @@ public class Customer {
         }
         this.name = name;
         this.age = age;
-        this.email = email;
-        this.address = address;
-        this.city = city;
-        this.country = country;
-        this.phoneNumber = phoneNumber;
-        this.dateOfBirth = dateOfBirth;
-        this.loyaltyPoints = loyaltyPoints;
-        this.accountCreationDate = accountCreationDate;
-        this.preferredPaymentMethod = preferredPaymentMethod;
     }
 
     public String getName() {
@@ -141,4 +132,3 @@ public class Customer {
         this.preferredPaymentMethod = preferredPaymentMethod;
     }
 }
-
