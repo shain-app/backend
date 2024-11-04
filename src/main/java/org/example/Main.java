@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.app.model.Customer;
 import org.example.app.service.ItemService;
 import org.example.app.utils.RequestHandler;
 

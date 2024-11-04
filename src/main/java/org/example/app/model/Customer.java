@@ -16,14 +16,19 @@ public class Customer {
     private LocalDate accountCreationDate;
     private String preferredPaymentMethod;
     
-    public Customer(String name, int age, String email, String address, String city, String country,
-                    String phoneNumber, LocalDate dateOfBirth, int loyaltyPoints,
-                    LocalDate accountCreationDate, String preferredPaymentMethod) {
-        if (age <= 0) {
-            throw new IllegalArgumentException("Age must be greater than 0.");
-        }
+    public Customer(String name, int age, String email, String address, String city, String country, String phoneNumber,
+            LocalDate dateOfBirth, int loyaltyPoints, LocalDate accountCreationDate, String preferredPaymentMethod) {
         this.name = name;
         this.age = age;
+        this.email = email;
+        this.address = address;
+        this.city = city;
+        this.country = country;
+        this.phoneNumber = phoneNumber;
+        this.dateOfBirth = dateOfBirth;
+        this.loyaltyPoints = loyaltyPoints;
+        this.accountCreationDate = accountCreationDate;
+        this.preferredPaymentMethod = preferredPaymentMethod;
     }
 
     public String getName() {
