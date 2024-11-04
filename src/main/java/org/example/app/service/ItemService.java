@@ -5,7 +5,7 @@ import org.example.app.repository.ShainDatabase;
 
 import java.util.List;
 
-public class ShainService {
+public class ItemService {
 
     private final ShainDatabase shainDatabase = new ShainDatabase();
 

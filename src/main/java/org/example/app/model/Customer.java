@@ -15,10 +15,13 @@ public class Customer {
     private int loyaltyPoints;
     private LocalDate accountCreationDate;
     private String preferredPaymentMethod;
-
+    
     public Customer(String name, int age, String email, String address, String city, String country,
                     String phoneNumber, LocalDate dateOfBirth, int loyaltyPoints,
                     LocalDate accountCreationDate, String preferredPaymentMethod) {
+        if (age <= 0) {
+            throw new IllegalArgumentException("Age must be greater than 0.");
+        }
         this.name = name;
         this.age = age;
         this.email = email;
@@ -37,6 +40,9 @@ public class Customer {
     }
 
     public void setName(String newName) {
+        if (newName == null || newName.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
         this.name = newName;
     }
 
@@ -45,10 +51,10 @@ public class Customer {
     }
 
     public void setAge(int newAge) {
-        if(newAge > 0) {
-            this.age = newAge;
+        if (newAge < 0 ) {
+            throw new IllegalArgumentException("Age can't be 0 or below 0.");
         }
-        System.out.println("Age can't be 0 or below 0.");
+        this.age = newAge;
     }
 
     public String getEmail() {

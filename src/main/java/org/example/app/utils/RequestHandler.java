@@ -6,15 +6,15 @@ import java.net.*;
 
 import org.example.app.api.ShainApi;
 import org.example.app.model.Item;
-import org.example.app.service.ShainService;
+import org.example.app.service.ItemService;
 
 public class RequestHandler {
 
     private final ShainApi shainApi;
     private final ObjectMapper objectMapper;
 
-    public RequestHandler(ShainService shainService) {
-        this.shainApi = new ShainApi(shainService);
+    public RequestHandler(ItemService itemService) {
+        this.shainApi = new ShainApi(itemService);
         this.objectMapper = new ObjectMapper();
     }
 
