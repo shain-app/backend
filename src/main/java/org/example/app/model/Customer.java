@@ -1,9 +1,11 @@
 package org.example.app.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Customer {
 
+    private String id;
     private String name;
     private int age;
     private String email;
@@ -15,9 +17,10 @@ public class Customer {
     private int loyaltyPoints;
     private LocalDate accountCreationDate;
     private String preferredPaymentMethod;
-    
+    private final Cart cart;
+
     public Customer(String name, int age, String email, String address, String city, String country, String phoneNumber,
-            LocalDate dateOfBirth, int loyaltyPoints, LocalDate accountCreationDate, String preferredPaymentMethod) {
+                    LocalDate dateOfBirth, int loyaltyPoints, LocalDate accountCreationDate, String preferredPaymentMethod) {
         this.name = name;
         this.age = age;
         this.email = email;
@@ -29,6 +32,15 @@ public class Customer {
         this.loyaltyPoints = loyaltyPoints;
         this.accountCreationDate = accountCreationDate;
         this.preferredPaymentMethod = preferredPaymentMethod;
+        this.cart = new Cart();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -135,5 +147,9 @@ public class Customer {
 
     public void setPreferredPaymentMethod(String preferredPaymentMethod) {
         this.preferredPaymentMethod = preferredPaymentMethod;
+    }
+
+    public Cart getCart() {
+        return cart;
     }
 }

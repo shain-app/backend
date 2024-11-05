@@ -1,21 +1,17 @@
 package org.example.app.service;
 
 import org.example.app.model.Cart;
+import org.example.app.model.Customer;
 import org.example.app.model.Item;
 
 import java.util.List;
 
 public class CartService {
-    private Cart cart;
-
-    public CartService() {
-        this.cart = new Cart();
-    }
 
     // Method to add an item to the cart with error handling
-    public String addItemToCart(Item item) {
+    public String addItemToCart(Item item, Customer customer) {
         try {
-            cart.getItemList().add(item);
+            customer.getCart().getItemList().add(item);
             return "Item added successfully.";
         } catch (IllegalArgumentException e) {
             return "Validation error: " + e.getMessage();
@@ -25,13 +21,13 @@ public class CartService {
     }
 
     // Method to calculate the total price
-    public double calculateTotalPrice() {
-        return cart.calculateTotalPrice();
+    public double calculateTotalPrice(Customer customer) {
+        return customer.getCart().calculateTotalPrice();
     }
 
     // Method to remove an item by name
-    public String removeItemByName(String itemName) {
-        List<Item> items = cart.getItemList();
+    public String removeItemByName(String itemName, Customer customer) {
+        List<Item> items = customer.getCart().getItemList();
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(itemName)) {
                 items.remove(item);
@@ -42,8 +38,8 @@ public class CartService {
     }
 
     // Method to clear all items from the cart
-    public String clearCart() {
-        cart.getItemList().clear();
+    public String clearCart(Customer customer) {
+        customer.getCart().getItemList().clear();
         return "Cart cleared.";
     }
 }
