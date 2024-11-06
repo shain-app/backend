@@ -1,6 +1,5 @@
 package org.example.app.service;
 
-import org.example.app.model.Cart;
 import org.example.app.model.Customer;
 import org.example.app.model.Item;
 
@@ -8,16 +7,10 @@ import java.util.List;
 
 public class CartService {
 
-    // Method to add an item to the cart with error handling
+    // Method to add an item to the cart
     public String addItemToCart(Item item, Customer customer) {
-        try {
-            customer.getCart().getItemList().add(item);
-            return "Item added successfully.";
-        } catch (IllegalArgumentException e) {
-            return "Validation error: " + e.getMessage();
-        } catch (Exception e) {
-            return "There is an error coming from the database.";
-        }
+        customer.getCart().getItemList().add(item);
+        return "";
     }
 
     // Method to calculate the total price
@@ -25,12 +18,12 @@ public class CartService {
         return customer.getCart().calculateTotalPrice();
     }
 
-    // Method to remove an item by name
-    public String removeItemByName(String itemName, Customer customer) {
+    // Method to find the Item by his 'id' field
+    public String removeItemById(String itemId, Customer customer) {
         List<Item> items = customer.getCart().getItemList();
-        for (Item item : items) {
-            if (item.getName().equalsIgnoreCase(itemName)) {
-                items.remove(item);
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getId().equalsIgnoreCase(itemId)) {
+                items.remove(i);
                 return "Item removed successfully.";
             }
         }
