@@ -17,12 +17,11 @@ public class Customer {
     private int loyaltyPoints;
     private LocalDate accountCreationDate;
     private String preferredPaymentMethod;
-    private final Cart cart;
+    private final Cart cart = new Cart();
 
-    public Customer(Cart cart){
-
-        this.cart = cart;
+    public Customer(){
     }
+
 
     public Customer(String name, int age, String email, String address, String city, String country, String phoneNumber,
                     LocalDate dateOfBirth, int loyaltyPoints, LocalDate accountCreationDate, String preferredPaymentMethod) {
@@ -37,7 +36,6 @@ public class Customer {
         this.loyaltyPoints = loyaltyPoints;
         this.accountCreationDate = accountCreationDate;
         this.preferredPaymentMethod = preferredPaymentMethod;
-        this.cart = new Cart();
     }
 
     public String getId() {
