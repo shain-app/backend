@@ -25,7 +25,7 @@ public class ItemService {
     }
 
     // Method to remove an item by id
-    public void remove(Integer id) {
+    public void remove(String id) {
         shainDatabase.getInMemoryDatabase().removeIf(item -> item.getId().equals(id));
     }
 }
