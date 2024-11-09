@@ -18,14 +18,15 @@ public class ItemService {
     }
 
     // Method to create a new item
-    public void create(Item item) {
-        shainDatabase.getInMemoryDatabase().add(item);
+    public Item create(Item item) {
+        List<Item> database = shainDatabase.getInMemoryDatabase();
+        database.add(item);
+        return item;
     }
 
     // Method to remove an item by id
-    public boolean remove(Integer id) {
-        List<Item> items = shainDatabase.getInMemoryDatabase();
-        return items.removeIf(item -> item.getId().equals(id));
+    public void remove(Integer id) {
+        shainDatabase.getInMemoryDatabase().removeIf(item -> item.getId().equals(id));
     }
 }
 
