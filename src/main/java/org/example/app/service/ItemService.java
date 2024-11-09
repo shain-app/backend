@@ -16,4 +16,17 @@ public class ItemService {
     public List<Item> getAll() {
         return shainDatabase.getInMemoryDatabase();
     }
+
+    // Method to create a new item
+    public Item create(Item item) {
+        List<Item> database = shainDatabase.getInMemoryDatabase();
+        database.add(item);
+        return item;
+    }
+
+    // Method to remove an item by id
+    public void remove(String id) {
+        shainDatabase.getInMemoryDatabase().removeIf(item -> item.getId().equals(id));
+    }
 }
+
