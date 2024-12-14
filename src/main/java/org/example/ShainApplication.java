@@ -3,7 +3,7 @@ package org.example;
 import org.example.app.service.ItemService;
 import org.example.app.utils.RequestHandler;
 
-public class Main {
+public class ShainApplication {
 
     public static void main(String[] args) {
 
