@@ -12,59 +12,16 @@
     <name>Shain Application</name>
     <description>Your application description here</description>
 
-<!--    <parent>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-<!--        <version>3.2.0</version>-->
-<!--        <relativePath />-->
-<!--    </parent>-->
-
     <properties>
         <java.version>21</java.version>
     </properties>
 
     <dependencies>
-<!--        &lt;!&ndash; Spring Boot Starter Web (includes embedded Tomcat) &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-web</artifactId>-->
-<!--        </dependency>-->
-
         <!-- Jackson Databind (for JSON processing) -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.15.0</version> <!-- Use the latest compatible version with Spring Boot 3.x -->
         </dependency>
-
-<!--        &lt;!&ndash; Spring Boot Starter Test (for testing your application) &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; Optional: Spring Boot Starter Thymeleaf for templating &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; Optional: Spring Boot Starter Data JPA if you're using JPA &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--        </dependency>-->
-
     </dependencies>
-
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            &lt;!&ndash; Spring Boot Maven Plugin to build the app &ndash;&gt;-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
 </project>
