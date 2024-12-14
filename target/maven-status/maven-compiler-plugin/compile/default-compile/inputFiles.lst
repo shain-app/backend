@@ -1,9 +1,10 @@
-/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/Main.java
-/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/api/ShainApi.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/repository/CustomerRepository.java
 /Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Cart.java
-/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Customer.java
-/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Item.java
-/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/repository/ShainDatabase.java
-/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/service/CartService.java
 /Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/service/ItemService.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Item.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/repository/ItemRepository.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/service/CartService.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/api/ShainApi.java
 /Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/utils/RequestHandler.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/app/model/Customer.java
+/Users/dstoyanov/Projects/SheinApp/backend/src/main/java/org/example/Main.java

@@ -9,11 +9,11 @@ import java.util.List;
  * This class will represent an in-memory database. It will have a simple list and pre-initialised items
  * when the app starts.
  */
-public class ShainDatabase {
+public class ItemRepository {
 
     private List<Item> inMemoryDatabase = new ArrayList<>();
 
-    public ShainDatabase() {
+    public ItemRepository() {
         initializeDatabase();
     }
 
