@@ -1,7 +1,13 @@
 package org.example.app.model;
 
+/**
+ * This class represents a blueprint on how an Item class should look like and its properties.
+ */
 public class Item {
 
+    /**
+     * These are the properties of the Item class
+     */
     private String id;
     private String name;
     private String size;
