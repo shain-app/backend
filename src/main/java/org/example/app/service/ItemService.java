@@ -19,8 +19,7 @@ public class ItemService {
 
     // Method to create a new item
     public Item create(Item item) {
-        List<Item> database = itemRepository.getInMemoryDatabase();
-        database.add(item);
+        itemRepository.getInMemoryDatabase().add(item);
         return item;
     }
 

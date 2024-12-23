@@ -22,7 +22,6 @@ public class Customer {
     public Customer(){
     }
 
-
     public Customer(String name, int age, String email, String address, String city, String country, String phoneNumber,
                     LocalDate dateOfBirth, int loyaltyPoints, LocalDate accountCreationDate, String preferredPaymentMethod) {
         this.name = name;
