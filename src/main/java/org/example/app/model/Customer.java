@@ -1,10 +1,16 @@
 package org.example.app.model;
 
 import java.time.LocalDate;
-import java.util.List;
 
+/**
+ * This class represents data on how a customer object should be created. In a sense you can say that this class is
+ * like a blueprint for how a customer should look like.
+ */
 public class Customer {
 
+    /**
+     * These are the properties of the Customer class
+     */
     private String id;
     private String name;
     private int age;

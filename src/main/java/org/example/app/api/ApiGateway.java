@@ -9,11 +9,11 @@ import java.util.List;
  * This class will represent the doorway to the backend app. This is where the application will receive
  * data from the frontend and sent back the necessary response.
  */
-public class ShainApi {
+public class ApiGateway {
 
     private final ItemService itemService;
 
-    public ShainApi(ItemService itemService) {
+    public ApiGateway(ItemService itemService) {
         this.itemService = itemService;
     }
 

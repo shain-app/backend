@@ -5,6 +5,10 @@ import org.example.app.model.Item;
 
 import java.util.List;
 
+/**
+ * This class represents the business logic related to adding, removing and other operations related
+ * to a Customer's cart.
+ */
 public class CartService {
 
     // Method to add an item to the cart
@@ -15,7 +19,12 @@ public class CartService {
 
     // Method to calculate the total price
     public double calculateTotalPrice(Customer customer) {
-        return customer.getCart().calculateTotalPrice();
+        double totalPrice = 0.0;
+
+        for (Item item : customer.getCart().getItemList()) {
+            totalPrice += item.getPrice();
+        }
+        return totalPrice;
     }
 
     // Method to find the Item by his 'id' field

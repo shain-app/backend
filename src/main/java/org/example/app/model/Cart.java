@@ -3,19 +3,16 @@ package org.example.app.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents data on how a cart object should be created and te properties it will have.
+ */
 public class Cart {
 
+    /**
+     * These are the properties of the Cart class
+     */
     private String id;
     private List<Item> itemList = new ArrayList<>();
-
-    public double calculateTotalPrice() {
-        double totalPrice = 0.0;
-
-        for (Item item : itemList) {
-           totalPrice += item.getPrice();
-        }
-        return totalPrice;
-    }
 
     public List<Item> getItemList() {
         return itemList;
