@@ -30,5 +30,9 @@ public class ItemService {
     public void remove(String id) {
         itemRepository.getItems().removeIf(item -> item.getId().equals(id));
     }
+
+    private String getItemName(int index) {
+        return itemRepository.getItems().get(index).getName();
+    }
 }
 
