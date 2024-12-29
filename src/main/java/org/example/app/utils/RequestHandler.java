@@ -4,17 +4,17 @@ import com.fasterxml.jackson.databind.ObjectMapper; // Import Jackson's ObjectMa
 import java.io.*;
 import java.net.*;
 
-import org.example.app.api.ApiGateway;
+import org.example.app.api.ItemGateway;
 import org.example.app.model.Item;
 import org.example.app.service.ItemService;
 
 public class RequestHandler {
 
-    private final ApiGateway apiGateway;
+    private final ItemGateway itemGateway;
     private final ObjectMapper objectMapper;
 
     public RequestHandler(ItemService itemService) {
-        this.apiGateway = new ApiGateway(itemService);
+        this.itemGateway = new ItemGateway(itemService);
         this.objectMapper = new ObjectMapper();
     }
 
@@ -39,7 +39,7 @@ public class RequestHandler {
                 if (requestLine.startsWith("GET /items")) {
                     Integer id = extractIdFromRequest(requestLine);
                     try {
-                        Item item = apiGateway.getItem(id);
+                        Item item = itemGateway.getItem(id);
                         sendJsonResponse(output, item);
                         System.out.println("Item: " + item + " sent successfully");
                     } catch(IndexOutOfBoundsException e) {
